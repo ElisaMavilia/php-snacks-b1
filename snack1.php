@@ -60,9 +60,10 @@ $basketGame = [
 <body>
     <main>
       <h1>Risultato partite</h1>
-      <p><?php foreach($basketGame as $game){
-        echo $game ['home'], "-", ['guest'], "|", ['scoreH'], "|", ['scoreG'];
-      } ?></p>
+      <?php foreach($basketGame as $game){ ?>
+        <p> echo $game ['home'], "-", ['guest'], "|", ['scoreH'], "|", ['scoreG'];
+     </p>
+     <?php } ?>
       
           
     </main>
