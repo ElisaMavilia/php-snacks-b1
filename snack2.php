@@ -5,20 +5,10 @@ Con un form passare come parametri GET name, mail e age e verificare (cercando i
 
 <?php 
 $userdata = $_GET;
-
+$username = "";
+$useremail = "";
 var_dump($userdata);
 
- if (empty($_GET['username'])) {
-    echo "Insert your name";
- } else {
-    $username = $_GET['username'];
- };
-
- if (strlen($_GET['username']) < 3){
-    echo 'Min 3 characters required';
-} else{
-    $username = $_GET['username'];
-}
 ?>
 
  <!DOCTYPE html>
@@ -41,20 +31,33 @@ var_dump($userdata);
         <div>
            <?php
             if (empty($_GET['username'])) {
-                echo "Insert your name";
+                echo "Name: this field is mandatory";
              } else {
                 $username = $_GET['username'];
+                
              };
            ?>
         </div>
         <div>
             <?php  
-             if (strlen($_GET['username']) < 3){
-                echo 'Min 3 characters required';
+             if (strlen($username) < 3){
+                echo 'Min 3 charachters required';
             } else{
                 $username = $_GET['username'];
             }
             ?>
+        </div>
+        <div>
+            <?php
+                if (str_contains('@', $useremail) && (str_contains('.', $useremail))) {
+                   $useremail = $_GET['email'];
+                   echo 'The password is correct!';
+                
+                }else{
+                    echo 'enter a valid email address';
+                }
+            ?>
+            
         </div>
     </main>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
