@@ -3,6 +3,11 @@ Snack 2
 Con un form passare come parametri GET name, mail e age e verificare (cercando i metodi che non conosciamo nella documentazione) che name sia più lungo di 3 caratteri, che mail contenga un punto e una chiocciola e che age sia un numero. Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”
  -->
 
+<?php 
+$userdata = $_GET;
+var_dump($userdata)
+?>
+
  <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,9 +20,9 @@ Con un form passare come parametri GET name, mail e age e verificare (cercando i
 <body>
     <main >
         <form action="snack2.php" method="GET" name="userdata">
-            <input type="text" value="name">
-            <input type="email" value="email">
-            <input type="number" value="age">
+            <input type="text" name="name">
+            <input type="email" name="email">
+            <input type="number" name="">
             <button type="submit" class="btn btn-success">Send</button>
         </form>
     </main>
