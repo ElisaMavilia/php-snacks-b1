@@ -58,12 +58,16 @@ $basketGame = [
     <title>PHP Snack 1</title>
 </head>
 <body>
-    <main>
-        <p>
-        <?php foreach ($basketGame as $game){ ?>
-            <?php echo $game ['home']," - " , $game['guest'], "  ",$game['scoreH'], " | ", $game['scoreG'], " - "?>
-      <?php } ?>
-        </p>
+    <main class="">
+        <div class="card">
+           <ul> <?php foreach ($basketGame as $game){ ?>
+            <li> 
+                <?php echo $game ['home']," - " , $game['guest'], "  "," | ", $game['scoreH'], " - " , $game['scoreG']?>
+                 <?php } ?>
+            </li>
+           </ul>
+        </div>
+        <br>
       
        
           
