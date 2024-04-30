@@ -26,7 +26,7 @@ $basketGame = [
     [
         'home' => 'Djurgården',
         'guest' => 'Malmö',
-        'scoreH' =>'"22',
+        'scoreH' =>'22',
         'scoreG' => '35'
     ],
 
